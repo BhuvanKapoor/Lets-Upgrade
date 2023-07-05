@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Responsive Card Layout</title>
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .card {
+      width: 300px;
+      height: 300px;
+      margin: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .card img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .card-content {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .card {
+        width: calc(50% - 20px);
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .card {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="card1.jpg" alt="Card 1">
+      <div class="card-title">Card 1</div>
+      <div class="card-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+    </div>
+    <div class="card">
+      <img src="card2.jpg" alt="Card 2">
+      <div class="card-title">Card 2</div>
+      <div class="card-content">Praesent tincidunt faucibus risus, quis commodo felis bibendum eget.</div>
+    </div>
+    <div class="card">
+      <img src="card3.jpg" alt="Card 3">
+      <div class="card-title">Card 3</div>
+      <div class="card-content">Sed convallis justo vitae elit congue viverra.</div>
+    </div>
+  </div>
+</body>
+</html>
